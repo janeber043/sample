@@ -1,0 +1,95 @@
+Hands-On Activity: Practicing CSS Class, ID, and Chaining
+Objective:
+
+To apply CSS styles using class selectors, id selectors, and chaining.
+
+To strengthen the knowledge of students in targeting HTML elements with different selectors.
+
+Part 1 – Using Class Selector
+
+Open a new HTML file and create this structure:
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Class Example</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1 class="title">Welcome to CSS Class Example</h1>
+    <p class="highlight">This is the first paragraph styled with a class.</p>
+    <p>This is a normal paragraph without class.</p>
+    <p class="highlight">This is the second paragraph with the same class.</p>
+</body>
+</html>
+
+
+In style.css, add:
+
+.highlight {
+    color: blue;
+    font-weight: bold;
+}
+
+.title {
+    text-align: center;
+    color: green;
+}
+
+
+Save and refresh. Notice that multiple elements can use the same class.
+
+Part 2 – Using ID Selector
+
+Modify your HTML file by adding an element with id:
+
+<h2 id="unique-heading">This is a unique heading</h2>
+
+
+In style.css, add:
+
+#unique-heading {
+    color: red;
+    font-size: 24px;
+    text-decoration: underline;
+}
+
+
+Save and refresh. Notice that an id is unique and should only be used once per page.
+
+Part 3 – Chaining Selectors
+
+Add this HTML code inside <body>:
+
+<div class="box">
+    <p>This paragraph is inside a box but without chaining style.</p>
+</div>
+
+<div class="box">
+    <p class="highlight">This paragraph is inside a box and has a class too.</p>
+</div>
+
+
+In style.css, add:
+
+.box {
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+}
+
+.box .highlight {
+    background-color: yellow;
+    color: darkblue;
+}
+
+
+Save and refresh. Notice that chaining .box .highlight applies style only to the element with class="highlight" inside .box.
+
+Student Tasks:
+
+Create 2 more paragraphs using different classes.
+
+Create another unique id and style it differently.
+
+Use chaining with another container (e.g., <section> or <div>) and test how it affects the elements inside.
